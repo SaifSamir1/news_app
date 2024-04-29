@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app_new/mangers/home_cubit/home_cubit.dart';
 import 'package:news_app_new/servics/http_service.dart';
 import 'package:news_app_new/utils/app_styels.dart';
+import 'package:news_app_new/utils/constant.dart';
 
 import '../widgets/category_news_screen_body.dart';
 
@@ -18,7 +19,7 @@ class CategoryNewsScreen extends StatelessWidget {
         title: Text(
           categoryName,
           style:
-              AppStyles.styleSemiBold30(context).copyWith(color: Colors.blue),
+              AppStyles.styleSemiBold30(context).copyWith(color:defaultColor),
         ),
         leading: BackButton(
           onPressed: () {
@@ -27,11 +28,8 @@ class CategoryNewsScreen extends StatelessWidget {
         ),
       ),
       body: SafeArea(
-        child: BlocProvider(
-          create: (context) => HomeCubit(HttpService()),
-          child: CategoryNewsScreenBody(
-            categoryName: categoryName,
-          ),
+        child: CategoryNewsScreenBody(
+          categoryName: categoryName,
         ),
       ),
     );

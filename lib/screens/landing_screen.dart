@@ -33,7 +33,7 @@ class LandingScreen extends StatelessWidget {
               ),
               Text(
                 'News from around the\n       world for you ',
-                style: AppStyles.styleBold25(context),
+                style: AppStyles.styleBold30(context),
               ),
               const SizedBox(
                 height: 20,
@@ -41,7 +41,7 @@ class LandingScreen extends StatelessWidget {
               Text(
                 'Best time to read , take your time to read\n        a little more of this world',
                 style: AppStyles.styleSemiBold18(context)
-                    .copyWith(color: Colors.black26),
+                    .copyWith(),
               ),
               const SizedBox(
                 height: 40,

@@ -7,6 +7,8 @@ final class HomeInitial extends HomeState {}
 
 final class ChangeCarouselSliderIndex extends HomeState {}
 
+final class ChangeAppTheme extends HomeState {}
+
 final class FetchArticleLoading extends HomeState {}
 final class FetchArticleSuccess extends HomeState {}
 final class FetchArticleError extends HomeState {

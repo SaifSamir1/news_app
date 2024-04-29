@@ -1,6 +1,8 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app_new/mangers/home_cubit/home_cubit.dart';
+import 'package:news_app_new/servics/hive_service.dart';
 import 'package:news_app_new/servics/http_service.dart';
 
 import '../widgets/app_bar_title.dart';
@@ -15,11 +17,30 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: const AppBarTitle(),
+        actions: [
+          BlocBuilder<HomeCubit, HomeState>(
+            builder: (context, state) {
+              return PopupMenuButton<bool>(
+                icon: const Icon(Icons.more_vert),
+                onSelected: (value) {
+                  BlocProvider.of<HomeCubit>(context).changeAppTheme();
+                },
+                offset: const Offset(-20, 38),
+                itemBuilder: (context) =>
+                [
+                  PopupMenuItem(
+                    value: false,
+                    child: Text(myBox!.get('theme')),
+                  ),
+                  // ... other menu items
+                ],
+              );
+            },
+          ),
+        ],
         elevation: 0,
       ),
-      body: BlocProvider(
-          create: (context)=> HomeCubit(HttpService()) ,
-          child: const HomeScreenBody()),
+      body: const HomeScreenBody(),
     );
   }
 }

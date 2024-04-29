@@ -4,6 +4,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../mangers/home_cubit/home_cubit.dart';
 import '../models/carousel_model.dart';
+import '../utils/constant.dart';
 
 class BuildIndicator extends StatelessWidget {
   const BuildIndicator({super.key, required this.sliders});
@@ -15,10 +16,10 @@ class BuildIndicator extends StatelessWidget {
         return AnimatedSmoothIndicator(
           activeIndex: BlocProvider.of<HomeCubit>(context).activeIndex,
           count: sliders.articles!.length,
-          effect: const SlideEffect(
+          effect:  const SlideEffect(
             dotWidth: 15,
             dotHeight: 15,
-            activeDotColor: Colors.blue,
+            activeDotColor: defaultColor,
           ),
         );
       },

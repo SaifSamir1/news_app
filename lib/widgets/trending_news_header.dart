@@ -20,13 +20,8 @@ class TrendingNewsHeader extends StatelessWidget {
         children: [
           Text(
             'Trending News!',
-            style: AppStyles.styleSemiBold18(context),
+            style: AppStyles.styleSemiBold24(context),
           ),
-          // Text(
-          //   'View All',
-          //   style: AppStyles.styleSemiBold16(context)
-          //       .copyWith(color: Colors.blue),
-          // ),
         ],
       ),
     );

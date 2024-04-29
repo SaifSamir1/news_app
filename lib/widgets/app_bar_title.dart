@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 
 import '../utils/app_styels.dart';
+import '../utils/constant.dart';
 
 class AppBarTitle extends StatelessWidget {
   const AppBarTitle({
@@ -15,8 +16,8 @@ class AppBarTitle extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         const Text('News'),
-        Text('App',style: AppStyles.styleSemiBold30(context).copyWith(
-            color: Colors.blue
+        Text('App',style: AppStyles.styleBold35(context).copyWith(
+            color: defaultColor
         ),),
       ],
     );

@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:news_app_new/utils/constant.dart';
 
 import '../screens/home_screen.dart';
 import '../utils/app_styels.dart';
@@ -16,7 +17,7 @@ class StartedButton extends StatelessWidget {
       height: 48,
       child: ElevatedButton(
         style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Colors.blue)),
+            backgroundColor: MaterialStateProperty.all(defaultColor)),
         child: Text(
           'Get Started',
           style: AppStyles.styleSemiBold18(context)

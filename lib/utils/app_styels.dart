@@ -64,9 +64,15 @@ abstract class AppStyles {
         fontWeight: FontWeight.w600,
     );
   }
-  static TextStyle styleBold25(BuildContext context,[Color? textColor]) {
+  static TextStyle styleBold35(BuildContext context,[Color? textColor]) {
     return TextStyle(
-      fontSize: getResponsiveFontSize(context, fontSize: 25),
+      fontSize: getResponsiveFontSize(context, fontSize: 35),
+      fontWeight: FontWeight.bold,
+    );
+  }
+  static TextStyle styleBold30(BuildContext context,[Color? textColor]) {
+    return TextStyle(
+      fontSize: getResponsiveFontSize(context, fontSize: 30),
       fontWeight: FontWeight.bold,
     );
   }

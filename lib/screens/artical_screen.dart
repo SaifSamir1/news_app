@@ -12,23 +12,20 @@ class ArticleScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => HomeCubit(HttpService()),
-      child: Scaffold(
-        appBar: AppBar(
-          leading: BackButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-          centerTitle: true,
-          title: const AppBarTitle(),
-          elevation: 0,
+    return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
-        body: SafeArea(
-          child: ArticleScreenBody(
-            webUrl: webUrl,
-          ),
+        centerTitle: true,
+        title: const AppBarTitle(),
+        elevation: 0,
+      ),
+      body: SafeArea(
+        child: ArticleScreenBody(
+          webUrl: webUrl,
         ),
       ),
     );

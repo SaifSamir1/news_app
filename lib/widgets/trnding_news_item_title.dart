@@ -21,7 +21,7 @@ class TrendingNewsItemTitle extends StatelessWidget {
         title,
         maxLines: 2,
         style: AppStyles.styleSemiBold18(context).copyWith(
-            color: Colors.black, overflow: TextOverflow.ellipsis),
+            overflow: TextOverflow.ellipsis),
       ),
     );
   }

@@ -19,14 +19,8 @@ class BreakingNewsHeader extends StatelessWidget {
         children: [
           Text(
             'Breaking News!',
-            style: AppStyles.styleSemiBold18(context),
+            style: AppStyles.styleSemiBold22(context),
           ),
-          // Text(
-          //   'View All',
-          //   style: AppStyles.styleSemiBold16(context).copyWith(
-          //       color: Colors.blue
-          //   ),
-          // ),
         ],
       ),
     );

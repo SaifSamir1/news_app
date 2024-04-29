@@ -20,7 +20,7 @@ class TrendingNewsItemDescribtion extends StatelessWidget {
         description,
         maxLines: 3,
         style: AppStyles.styleSemiBold16(context).copyWith(
-            color: Colors.black54, overflow: TextOverflow.ellipsis),
+             overflow: TextOverflow.ellipsis),
       ),
     );
   }

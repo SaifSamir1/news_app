@@ -1,10 +1,7 @@
 import 'dart:developer';
 import 'dart:io';
-
 import 'package:dartz/dartz.dart';
-
 import 'package:http/http.dart' as http;
-
 import '../utils/constant.dart';
 
 class HttpService{

@@ -33,8 +33,9 @@ class TrendingNewItem extends StatelessWidget {
         );
       },
       child: Material(
-        elevation: 3,
+        elevation: 5,
         borderRadius: BorderRadius.circular(10),
+        shadowColor: Colors.grey,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 5),
           child: Row(

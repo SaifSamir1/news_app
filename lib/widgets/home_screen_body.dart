@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app_new/mangers/home_cubit/home_cubit.dart';
-import 'package:news_app_new/models/category_model.dart';
 import 'package:news_app_new/servics/category_data.dart';
+import 'package:news_app_new/utils/constant.dart';
 import 'package:news_app_new/widgets/trending_news_list_view.dart';
 import 'constant_in_home_screen.dart';
 
@@ -36,7 +36,7 @@ class _HomeScreenBodyState extends State<HomeScreenBody> {
             state is FetchArticleSuccess ||
             state is FetchSlidersLoading) {
           return const Center(
-            child: CircularProgressIndicator(),
+            child: CircularProgressIndicator(color: defaultColor,),
           );
         }
         if (state is FetchArticleError || state is FetchSlidersError) {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app_new/mangers/home_cubit/home_cubit.dart';
+import 'package:news_app_new/utils/constant.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class CustomWebView extends StatelessWidget {
@@ -23,7 +24,7 @@ class CustomWebView extends StatelessWidget {
             ),
             BlocProvider.of<HomeCubit>(context).webViewLoading
                 ? const Center(
-                    child: CircularProgressIndicator(),
+                    child: CircularProgressIndicator(color: defaultColor,),
                   )
                 : const SizedBox(), //
           ],

@@ -1,12 +1,11 @@
 import 'dart:convert';
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app_new/models/carousel_model.dart';
 import 'package:news_app_new/models/category_model.dart';
+import 'package:news_app_new/servics/hive_service.dart';
 import 'package:news_app_new/servics/http_service.dart';
-
 import '../../models/artical_model/artical_model.dart';
 
 part 'home_state.dart';
@@ -19,6 +18,17 @@ class HomeCubit extends Cubit<HomeState> {
   CarouselSliderModel? sliders;
   CategoryModel? categories;
   bool webViewLoading = true;
+
+  void changeAppTheme(){
+    if( myBox!.get('isDark') == 'false'){
+      myBox!.put('isDark', 'true');
+      myBox!.put('theme', 'Light');
+    }else{
+      myBox!.put('isDark', 'false');
+      myBox!.put('theme', 'Dark');
+    }
+    emit(ChangeAppTheme());
+  }
 
   void isLoading(bool loading) {
     webViewLoading = loading;
